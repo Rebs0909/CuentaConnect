@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; /* Elimina el margen predeterminado del body */
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Alinea los elementos en una columna */
+  height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+  background-color: #d8efdd;
+}
+
+header {
+  background-color: #70ed89; /* Color de fondo opcional */
+  padding: 20px;
+  text-align: center;
+  width: 100%; /* Ocupa el 100% del ancho de la ventana */
+  box-sizing: border-box;
+  position: relative; /* Permite el posicionamiento absoluto del botón */
+  color: black;
+  text-decoration: underline;
+  border: 2px solid black;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+header button {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  background-color: red;
+  color: white;
+  border-radius: 15px;
+}
+header span {
+  position: absolute;
+  top: 35px;
+  left: 20px;
+  font-size: 40px;
+  border: 10px double black;
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+  
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Alinea los elementos de la clase container en una columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  margin-top: 80px; /* Espacio debajo del header para evitar que se sobreponga */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  gap: 10px; /* Espacio entre los botones */
+  margin-bottom: 20px; /* Espacio debajo de los botones */
+  
+}
+
+button {
+  padding: 20px 40px;
+  font-size: 25px;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: rgb(59, 80, 164);
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
