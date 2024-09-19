@@ -59,7 +59,15 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('clearButton').addEventListener('click', function() {
       document.getElementById('timeList1').innerHTML = ''; // Vaciar la lista de tiempos 1
       document.getElementById('timeList2').innerHTML = ''; // Vaciar la lista de tiempos 2
-    });
+      
+      // Reiniciar los tiempos
+      times.button1 = null;
+      times.button2 = null;
+      
+      // Limpiar las visualizaciones de los temporizadores
+      document.getElementById('timeDisplay1').textContent = 'Tiempo desde el último clic: 0 segundos';
+      document.getElementById('timeDisplay2').textContent = 'Tiempo desde el último clic: 0 segundos';
+  });
     });
     // Alarmas
     document.getElementById('setAlarmButton').addEventListener('click', function() {

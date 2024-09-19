@@ -8,31 +8,34 @@
 </head>
 <body>
   <header>
+    <button id="setAlarmButton">Set Alarm</button>
     <span id="currentTime"></span>
-    <button id="clearButton">Clear data</button>
+    
+    <label for="alarmTimeInput">Alarm duration: </label>
+    <br><br>
+    <input type="number" id="alarmTimeInput" placeholder="Enter minutes">
     
     
-    <h1>- - Connect count - -</h1>
+    <p id="countdownDisplay">Time remaining: --:--</p>
+    
+    
+    
   </header>
-  <button id="setAlarmButton">Set Alarm</button>
-  
-  <p id="countdownDisplay">Time remaining: --:--</p>
-  
-  <label for="alarmTimeInput">Set Alarm Time (minutes): </label>
-  <br>
-  <input type="number" id="alarmTimeInput" placeholder="Enter minutes">
-  
+  <div>
+    
+</div>
 </body>
+
 <div class="container">
   <button id="timeButton1">Connect</button>
   <ul id="timeList1"></ul> <!-- Lista para el primer botón -->
   <ul id="timeList1"></ul> <!-- Lista para el primer botón -->
-  <p id="timeDisplay1">Tiempo desde el último clic: 0 segundos</p> <!-- Tiempo transcurrido para el primer botón -->
+  <p id="timeDisplay1">Tiempo desde el último click: 0 segundos</p> <!-- Tiempo transcurrido para el primer botón -->
   <br>
   <button id="timeButton2">Hold</button>
   <ul id="timeList2"></ul> <!-- Lista para el segundo botón -->
   <ul id="timeList2"></ul> <!-- Lista para el segundo botón -->
-  <p id="timeDisplay2">Tiempo desde el último clic: 0 segundos</p> <!-- Tiempo transcurrido para el segundo botón -->
+  <p id="timeDisplay2">Tiempo desde el último click: 0 segundos</p> <!-- Tiempo transcurrido para el segundo botón -->
   <br>
   
   <br>
@@ -40,4 +43,8 @@
 </div>
 
 <script src="Javascript/script.js"></script>
+<footer>
+  <button id="clearButton">Clear data</button>
+  
+</footer>
 </body>
