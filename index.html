@@ -9,22 +9,33 @@
 <body>
   <header>
     <span id="currentTime"></span>
-    <button id="clearButton">Borrar Datos</button>
+    <button id="clearButton">Clear data</button>
+    
+    
     <h1>- - Connect count - -</h1>
   </header>
-  <ul id="timeList1"></ul> <!-- Lista para el primer botón -->
-  <p id="timeDisplay1">Tiempo desde el último clic: 0 segundos</p> <!-- Tiempo transcurrido para el primer botón -->
+  <button id="setAlarmButton">Set Alarm</button>
   
-  <ul id="timeList2"></ul> <!-- Lista para el segundo botón -->
-  <p id="timeDisplay2">Tiempo desde el último clic: 0 segundos</p> <!-- Tiempo transcurrido para el segundo botón -->
+  <p id="countdownDisplay">Time remaining: --:--</p>
+  
+  <label for="alarmTimeInput">Set Alarm Time (minutes): </label>
+  <br>
+  <input type="number" id="alarmTimeInput" placeholder="Enter minutes">
+  
 </body>
 <div class="container">
-  <button id="timeButton1">Registrar connect</button>
+  <button id="timeButton1">Connect</button>
   <ul id="timeList1"></ul> <!-- Lista para el primer botón -->
+  <ul id="timeList1"></ul> <!-- Lista para el primer botón -->
+  <p id="timeDisplay1">Tiempo desde el último clic: 0 segundos</p> <!-- Tiempo transcurrido para el primer botón -->
   <br>
-  <button id="timeButton2">Registrar hold</button>
+  <button id="timeButton2">Hold</button>
   <ul id="timeList2"></ul> <!-- Lista para el segundo botón -->
+  <ul id="timeList2"></ul> <!-- Lista para el segundo botón -->
+  <p id="timeDisplay2">Tiempo desde el último clic: 0 segundos</p> <!-- Tiempo transcurrido para el segundo botón -->
+  <br>
   
+  <br>
   
 </div>
 

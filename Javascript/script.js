@@ -61,3 +61,44 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('timeList2').innerHTML = ''; // Vaciar la lista de tiempos 2
     });
     });
+    // Alarmas
+    document.getElementById('setAlarmButton').addEventListener('click', function() {
+      // Obtener el tiempo ingresado por el usuario
+      const minutesInput = parseInt(document.getElementById('alarmTimeInput').value);
+      
+      // Validar que el tiempo ingresado sea un número válido
+      if (isNaN(minutesInput) || minutesInput <= 0) {
+          alert('Please enter a valid number of minutes.');
+          return;
+      }
+  
+      // Convertir los minutos ingresados a segundos
+      let remainingTime = minutesInput * 60;
+  
+      // Crear un objeto de audio con el archivo de sonido para la alarma
+      const alarmSound = new Audio('persona5.mp3');
+  
+      // Mostrar el tiempo restante inicial
+      updateCountdownDisplay(remainingTime);
+  
+      // Iniciar el temporizador para actualizar el cronómetro cada segundo
+      const countdownInterval = setInterval(function() {
+          remainingTime--;
+          updateCountdownDisplay(remainingTime);
+  
+          // Si el tiempo llega a 0, detiene el cronómetro y reproduce el sonido de la alarma
+          if (remainingTime <= 0) {
+              clearInterval(countdownInterval);
+              document.getElementById('countdownDisplay').textContent = "Alarm triggered!";
+              alarmSound.play(); // Reproducir el sonido de la alarma
+          }
+      }, 1000);
+  });
+  
+  // Función para actualizar la visualización del tiempo restante en formato MM:SS
+  function updateCountdownDisplay(time) {
+      const minutes = Math.floor(time / 60);
+      const seconds = time % 60;
+      document.getElementById('countdownDisplay').textContent =
+          `Time remaining: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  }
